@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
                 openRegistration();
             }
         });
+
+        btnNormalLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNormalLogin();
+            }
+        });
     }
 
     private void openRegistration() {
