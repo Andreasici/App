@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnGoogleLogin;
     private Button btnFacebookLogin;
     private Button btnNormalLogin;
+    // sfrfg
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
