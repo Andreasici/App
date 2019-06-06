@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnFacebookLogin=findViewById(R.id.btnFacebookLogin);
-        btnRegistration=findViewById(R.id.btnRegistration);
-        btnGoogleLogin=findViewById(R.id.btnGoogleLogin);
-        btnNormalLogin=findViewById(R.id.btnNormalLogin);
+        btnFacebookLogin = findViewById(R.id.btnFacebookLogin);
+        btnRegistration = findViewById(R.id.btnRegistration);
+        btnGoogleLogin = findViewById(R.id.btnGoogleLogin);
+        btnNormalLogin = findViewById(R.id.btnNormalLogin);
 
 
         btnRegistration.setOnClickListener(new View.OnClickListener() {
