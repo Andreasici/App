@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnGoogleLogin;
     private Button btnFacebookLogin;
     private Button btnNormalLogin;
-    // sfrfg
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         btnGoogleLogin=findViewById(R.id.btnGoogleLogin);
         btnNormalLogin=findViewById(R.id.btnNormalLogin);
 
-        // gddrjkdfhgjodf
 
         btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
