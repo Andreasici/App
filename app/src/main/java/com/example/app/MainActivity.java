@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnGoogleLogin=findViewById(R.id.btnGoogleLogin);
         btnNormalLogin=findViewById(R.id.btnNormalLogin);
 
-
+        // gddrjkdfhgjodf
 
         btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
