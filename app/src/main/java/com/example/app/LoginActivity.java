@@ -50,5 +50,6 @@ public class LoginActivity extends AppCompatActivity {
         // 3a) if match -> open next Activity
         // 3b) if not match -> notice user about errors
         */
+        return true;
     }
 }
