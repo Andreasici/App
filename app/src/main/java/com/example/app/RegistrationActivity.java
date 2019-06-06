@@ -50,8 +50,11 @@ public class RegistrationActivity extends AppCompatActivity {
                     isValidLogin = false;
                 }
                 if(editPassword.length() < 8) {
-                    if(editPassword.length() == 0)
+                    if(editPassword.length() == 0 && editConfirmPassword.length() == 0) {
                         editPassword.setError("Password non inserita");
+                        editConfirmPassword.setError("Password non inserita");
+                    }
+
                     else
                         editPassword.setError("Password troppo corta");
                     isValidLogin = false;
