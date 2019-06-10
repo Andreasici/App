@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         /* TODO
         // 1) connecting to the web service as database for account check (email/password)
         // 2) check whether the input's values match some occurencies on the database
-        // 3a) if match -> open next Activity
+        // 3a) if match -> open next Activity, save it
         // 3b) if not match -> notice user about errors
         */
         return true;

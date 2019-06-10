@@ -2,6 +2,7 @@ package com.example.app;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -78,10 +79,10 @@ public class FragmentRegistration extends Fragment {
 
                 if(isValidLogin) {
 
-                    new AlertDialog.Builder(getActivity()).setTitle("Registrazione avvenuto con successo").setMessage("Registrazione avvenuto con successo").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    new AlertDialog.Builder(getActivity()).setTitle("Registrazione avvenuta con successo").setMessage("Registrazione avvenuta con successo").setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            openMapList();
                         }
                     }).setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
                         @Override
@@ -102,6 +103,12 @@ public class FragmentRegistration extends Fragment {
         });
         // Inflate the layout for this fragment
         return view;
+    }
+
+    private void openMapList(){
+        // open the next activity
+        Intent intent = new Intent(getActivity(), MapsActivity.class);
+        startActivity(intent);
     }
 
 }

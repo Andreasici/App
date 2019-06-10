@@ -43,6 +43,7 @@
             android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="text"
+            android:text="Pino"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
@@ -64,6 +65,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="text"
+            android:text="Catanuso"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtSurname" />
 
@@ -85,6 +87,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textEmailAddress"
+            android:text="pino.catanuso@hotmail.com"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
@@ -106,6 +109,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPassword"
+            android:text="cathathanos"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
@@ -127,6 +131,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPassword"
+            android:text="cathathanos"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtConfirmPassword" />
 
