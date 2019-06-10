@@ -132,7 +132,6 @@
 
         <Button
             android:id="@+id/btnRegistration"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
