@@ -12,6 +12,7 @@ public class CustomMapsAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int i) {
 
         Fragment fragment = null;
+        // aa
 
         switch (i) {
             case 0:
