@@ -1,30 +1,30 @@
-package com.example.app;
+package com.example.app.activity;
 
-import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.app.CustomMapsAdapter;
+import com.example.app.R;
+
+public class MapsActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
     private TabLayout tabs;
-    private CustomPageAdapter adapter;
+    private CustomMapsAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_maps);
 
         //Instanzio il ViewPager
         viewPager = findViewById(R.id.viewPager);
         viewPager.setOffscreenPageLimit(2);
 
         //Instanzio l'adapter
-        adapter = new CustomPageAdapter(getSupportFragmentManager());
+        adapter = new CustomMapsAdapter(getSupportFragmentManager());
 
         //Assegno l'adapter al ViewPager
         viewPager.setAdapter(adapter);
