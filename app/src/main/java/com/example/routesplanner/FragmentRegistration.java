@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.routesplanner;
 
 
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.app.activity.MapsActivity;
+import com.example.routesplanner.activity.MapsActivity;
 
 
 /**

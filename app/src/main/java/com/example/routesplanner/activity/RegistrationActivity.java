@@ -1,4 +1,4 @@
-package com.example.app.activity;
+package com.example.routesplanner.activity;
 
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.app.R;
+import com.example.routesplanner.R;
 
 public class RegistrationActivity extends AppCompatActivity {
 

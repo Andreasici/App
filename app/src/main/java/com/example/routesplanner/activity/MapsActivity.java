@@ -1,12 +1,12 @@
-package com.example.app.activity;
+package com.example.routesplanner.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.app.CustomMapsAdapter;
-import com.example.app.R;
+import com.example.routesplanner.CustomMapsAdapter;
+import com.example.routesplanner.R;
 
 public class MapsActivity extends AppCompatActivity {
 

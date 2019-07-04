@@ -1,24 +1,25 @@
-package com.example.app;
+package com.example.routesplanner;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class CustomPageAdapter extends FragmentStatePagerAdapter {
+public class CustomMapsAdapter extends FragmentStatePagerAdapter {
 
-    public CustomPageAdapter(FragmentManager fm) {super(fm);}
+    public CustomMapsAdapter(FragmentManager fm) {super(fm);}
 
     @Override
     public Fragment getItem(int i) {
 
         Fragment fragment = null;
+        // aa
 
         switch (i) {
             case 0:
-                fragment = new FragmentLogin();
+                fragment = new FragmentMyMaps();
                 break;
             case 1:
-                fragment = new FragmentRegistration();
+                fragment = new FragmentComMaps();
                 break;
         }
         return fragment;
@@ -33,9 +34,9 @@ public class CustomPageAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position){
         switch (position){
             case 0:
-                return "Login";
+                return "Le mie app";
             case 1:
-                return "Registrazione";
+                return "Le mappe della community";
             default:
                 return null;
         }

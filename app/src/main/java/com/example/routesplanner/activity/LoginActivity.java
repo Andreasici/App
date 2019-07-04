@@ -1,4 +1,4 @@
-package com.example.app.activity;
+package com.example.routesplanner.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.app.R;
+import com.example.routesplanner.R;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.routesplanner;
 
 
 import android.os.Bundle;
@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentComMaps extends Fragment {
+public class FragmentMyMaps extends Fragment {
 
 
-    public FragmentComMaps() {
+    public FragmentMyMaps() {
         // Required empty public constructor
     }
 
@@ -23,7 +23,7 @@ public class FragmentComMaps extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_com_maps, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_my_maps, container, false);
     }
 
 }

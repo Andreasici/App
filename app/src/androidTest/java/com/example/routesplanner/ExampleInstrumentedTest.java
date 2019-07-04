@@ -1,4 +1,4 @@
-package com.example.app;
+package com.example.routesplanner;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
