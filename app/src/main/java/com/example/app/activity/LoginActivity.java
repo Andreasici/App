@@ -1,10 +1,12 @@
-package com.example.app;
+package com.example.app.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.app.R;
 
 public class LoginActivity extends AppCompatActivity {
 
