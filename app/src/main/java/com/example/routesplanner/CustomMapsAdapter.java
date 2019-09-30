@@ -11,8 +11,7 @@ public class CustomMapsAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int i) {
 
-        Fragment fragment = ciccio;
-        // aa
+        Fragment fragment = null;
 
         switch (i) {
             case 0:
@@ -34,7 +33,7 @@ public class CustomMapsAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position){
         switch (position){
             case 0:
-                return "Le mie app";
+                return "Le mie mappe";
             case 1:
                 return "Le mappe della community";
             default:
