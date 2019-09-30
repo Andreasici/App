@@ -10,10 +10,18 @@
             android:layout_height="match_parent"
             android:isScrollContainer="false">
 
-                <LinearLayout
+                <!--LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical" />
+-->
+                <!-- Button to create a new user Map -->
+                <Button
+                    android:id="@+id/createNewMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/map_creation"/>
+                    <!--android:onClick="createNewMap"-->
 
 
         </ScrollView>

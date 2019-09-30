@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">App</string>
 
+    <string name="map_creation">Crea mappa</string>
+
     <string name="facebook_string">Facebook</string>
     <string name="google_string">Google</string>
+    <string name="title_activity_new_map">Map</string>
 </resources>
