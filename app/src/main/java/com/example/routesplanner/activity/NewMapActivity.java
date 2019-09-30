@@ -60,7 +60,6 @@ public class NewMapActivity extends FragmentActivity implements OnMapReadyCallba
 
     /*public void onConnectionFailed(ConnectionResult connectionResult) {
     }
-
     public void onLocationChanged(Location location) {}*/
 
 }

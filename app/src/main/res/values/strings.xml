@@ -3,4 +3,7 @@
 
     <string name="facebook_string">Facebook</string>
     <string name="google_string">Google</string>
+    <string name="map_creation">Crea mappa</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
