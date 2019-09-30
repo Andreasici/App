@@ -46,7 +46,7 @@ public class FragmentRegistration extends Fragment {
         btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Boolean isValidLogin = true;
+                Boolean isValidLogin = true; // isValidLogin
                 String regexEmail = "[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}";
                 String password = editPassword.getText().toString();
                 String passwordConfirm = editConfirmPassword.getText().toString();
