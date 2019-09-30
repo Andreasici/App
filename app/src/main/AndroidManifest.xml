@@ -13,7 +13,8 @@
         <activity android:name="com.example.routesplanner.FacebookLogin" />
         <activity android:name="com.example.routesplanner.activity.LoginActivity" />
         <activity android:name="com.example.routesplanner.activity.RegistrationActivity" />
-        <activity android:name="com.example.routesplanner.activity.MainActivity">
+        <activity android:name="com.example.routesplanner.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
