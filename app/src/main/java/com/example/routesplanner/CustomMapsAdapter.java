@@ -11,7 +11,7 @@ public class CustomMapsAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int i) {
 
-        Fragment fragment = null;
+        Fragment fragment = ciccio;
         // aa
 
         switch (i) {
