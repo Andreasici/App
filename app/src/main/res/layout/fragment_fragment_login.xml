@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FragmentLogin" >
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
@@ -14,41 +14,26 @@
 
         <Button
             android:id="@+id/btnGoogleLogin"
-            android:layout_width="115dp"
-            android:layout_height="72dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="56dp"
+            android:layout_width="214dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="28dp"
             android:backgroundTint="@android:color/holo_red_light"
             android:text="Google"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/btnFacebookLogin"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <Button
-            android:id="@+id/btnFacebookLogin"
-            android:layout_width="115dp"
-            android:layout_height="72dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@android:color/holo_blue_light"
-            android:text="Facebook"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+            app:layout_constraintVertical_bias="0.049" />
 
         <TextView
             android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="196dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="140dp"
             android:text="Email"
-            app:layout_constraintEnd_toStartOf="@+id/btnGoogleLogin"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toEndOf="@+id/btnFacebookLogin"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/editEmail"
@@ -85,25 +70,13 @@
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Login"
             app:layout_constraintEnd_toEndOf="@+id/editPassword"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.488"
             app:layout_constraintStart_toStartOf="@+id/editPassword"
             app:layout_constraintTop_toBottomOf="@+id/editPassword" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:text="Accedi con Facebook o Google"
-            app:layout_constraintEnd_toEndOf="@+id/btnGoogleLogin"
-            app:layout_constraintHorizontal_bias="0.513"
-            app:layout_constraintStart_toStartOf="@+id/btnFacebookLogin"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
