@@ -8,6 +8,10 @@
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_account"
             android:title="Account" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Impostazioni" />
     </group>
 
     <item android:title="Contatti">

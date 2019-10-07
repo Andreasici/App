@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,8 +18,6 @@ public class FragmentLogin extends Fragment {
     EditText editEmail;
     EditText editPassword;
     Button btnLogin;
-
-    private FirebaseAuth mAuth;
 
 
     public FragmentLogin() {
