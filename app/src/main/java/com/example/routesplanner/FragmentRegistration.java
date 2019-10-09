@@ -1,18 +1,25 @@
 package com.example.routesplanner;
 
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AlertDialog;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.routesplanner.activity.MapsActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -25,6 +32,8 @@ public class FragmentRegistration extends Fragment {
     private EditText editPassword;
     private EditText editConfirmPassword;
     private Button btnRegistration;
+
+    FirebaseAuth firebaseAuth;
 
     public FragmentRegistration() {
         // Required empty public constructor
@@ -42,6 +51,8 @@ public class FragmentRegistration extends Fragment {
         editPassword = (EditText) view.findViewById(R.id.editPassword);
         editConfirmPassword = (EditText) view.findViewById(R.id.editConfirmPassword);
         btnRegistration = (Button) view.findViewById(R.id.btnRegistration);
+
+        firebaseAuth = FirebaseAuth.getInstance();
 
         btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +91,36 @@ public class FragmentRegistration extends Fragment {
 
                 if(isValidLogin) {
 
-                    new AlertDialog.Builder(getActivity()).setTitle("Registrazione avvenuta con successo").setMessage("Registrazione avvenuta con successo").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    firebaseAuth.createUserWithEmailAndPassword(editEmail.getText().toString(),
+                            password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if(task.isSuccessful()){
+                                        new AlertDialog.Builder(getActivity()).setTitle("Registrazione avvenuta con successo").setMessage("Registrazione avvenuta con successo").setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                openMapList();
+                                            }
+                                        }).setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+
+                                            }
+                                        }).show();
+                                        editName.setText("");
+                                        editSurname.setText("");
+                                        editEmail.setText("");
+                                        editPassword.setText("");
+                                        editConfirmPassword.setText("");
+                                    }else{
+                                        Toast.makeText(getActivity(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                    }
+
+                    /*new AlertDialog.Builder(getActivity()).setTitle("Registrazione avvenuta con successo").setMessage("Registrazione avvenuta con successo").setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             openMapList();
@@ -95,8 +135,8 @@ public class FragmentRegistration extends Fragment {
                     editSurname.setText("");
                     editEmail.setText("");
                     editPassword.setText("");
-                    editConfirmPassword.setText("");
-                }
+                    editConfirmPassword.setText("");*/
+                /*}*/
 
             }
 

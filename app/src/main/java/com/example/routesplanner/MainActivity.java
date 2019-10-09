@@ -1,4 +1,4 @@
-package com.example.routesplanner.activity;
+package com.example.routesplanner;
 
 import android.os.Bundle;
 import com.google.android.material.tabs.TabLayout;

@@ -1,4 +1,4 @@
-package com.example.routesplanner.activity;
+package com.example.routesplanner;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -14,9 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import com.example.routesplanner.CustomMapsAdapter;
-import com.example.routesplanner.R;
 
 public class MapsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 

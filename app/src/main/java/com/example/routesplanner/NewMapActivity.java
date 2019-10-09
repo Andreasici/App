@@ -1,4 +1,4 @@
-package com.example.routesplanner.activity;
+package com.example.routesplanner;
 
 import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;

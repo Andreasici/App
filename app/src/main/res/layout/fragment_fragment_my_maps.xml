@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".FragmentMyMaps">
 
+
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,7 +24,19 @@
                     android:layout_height="match_parent"
                     android:text="@string/map_creation"/>
                     <!--android:onClick="createNewMap"-->
-
+                <!--android:onClick="createNewMap"-->
 
         </ScrollView>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"/>
+
+        <TextView
+            android:id="@+id/txtUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
 </FrameLayout>

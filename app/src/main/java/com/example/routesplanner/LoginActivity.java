@@ -1,4 +1,4 @@
-package com.example.routesplanner.activity;
+package com.example.routesplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

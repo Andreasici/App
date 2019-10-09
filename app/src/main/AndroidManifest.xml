@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+    <!--android:name=".HomeClass"-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,13 +19,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.SettingsActivity"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"></activity>
-        <activity android:name=".activity.AccountActivity" />
+        <activity android:name=".AccountActivity" />
         <!--
-       <activity android:name="com.example.routesplanner.activity.LoginActivity" />	             The API key for Google Maps-based APIs is defined as a string resource.
-       <activity android:name="com.example.routesplanner.activity.RegistrationActivity" />	             (See the file "res/values/google_maps_api.xml").
-       <activity android:name="com.example.routesplanner.activity.MainActivity">	             Note that the API key is linked to the encryption key used to sign the APK.
+       <activity android:name="com.example.routesplanner.LoginActivity" />	             The API key for Google Maps-based APIs is defined as a string resource.
+       <activity android:name="com.example.routesplanner.RegistrationActivity" />	             (See the file "res/values/google_maps_api.xml").
+       <activity android:name="com.example.routesplanner.MainActivity">	             Note that the API key is linked to the encryption key used to sign the APK.
             You need a different API key for each encryption key, including the release key that is used to
             sign the APK for publishing.
             You can define the keys for the debug and release targets in src/debug/ and src/release/.
@@ -32,14 +34,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".activity.NewMapActivity" />
+        <activity android:name=".NewMapActivity" />
         <activity
-            android:name=".activity.MapsActivity"
+            android:name=".MapsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FacebookLogin" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.RegistrationActivity" />
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
