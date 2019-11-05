@@ -2,6 +2,7 @@ package com.example.routesplanner;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,7 +13,9 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 public class MapsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -59,8 +62,13 @@ public class MapsActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.nav_account:
                 openAccountActivity();
+                break;
             case R.id.nav_settings:
                 openSettingsActivity();
+                break;
+            case R.id.nav_logout:
+                logout();
+                break;
         }
 
         return true;
@@ -85,5 +93,33 @@ public class MapsActivity extends AppCompatActivity implements NavigationView.On
         // open SettingsActivity
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+
+    private void logout() {
+        FirebaseAuth.getInstance().signOut();
+        // setting the sharedPreferences about logged-status to false
+        SharedPreferences sharedPreferences = this.getSharedPreferences("saved_logged_status", MODE_PRIVATE);
+        Log.d("login status", "before logout "+sharedPreferences.getBoolean("saved_logged_status", true));
+        SharedPreferences.Editor editor =  sharedPreferences.edit();
+        editor.putBoolean("saved_logged_status", false);
+        editor.commit();
+        // intent
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        this.finish();
+
+        // calling the mainActivity
+        startActivity(intent);
+        Log.d("login status", "after logout "+sharedPreferences.getBoolean("saved_logged_status", true));
+    }
+    private boolean getLoginStatus(){
+        // calling the sharedPreferences in order to get the relative value
+        SharedPreferences sharedPreferences = this.getSharedPreferences("saved_logged_status", MODE_PRIVATE);
+        // I store in the following var the value of the boolean corresponding to the key "R.string.saved_logged_status"
+        boolean sharedUserLogged = sharedPreferences.getBoolean("saved_logged_status", false);
+
+        return sharedUserLogged;
     }
 }

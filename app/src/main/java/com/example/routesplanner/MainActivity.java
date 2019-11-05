@@ -1,11 +1,11 @@
 package com.example.routesplanner;
 
 import android.os.Bundle;
-import com.google.android.material.tabs.TabLayout;
-import androidx.viewpager.widget.ViewPager;
+
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.routesplanner.CustomPageAdapter;
-import com.example.routesplanner.R;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,5 +33,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Associo il TabLayout al ViewPager
         tabs.setupWithViewPager(viewPager);
+
+        // calling the sharedPreferences in order to get the relative value
+        //SharedPreferences sharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
+        // I store in the following var the value of the boolean corresponding to the key "R.string.saved_logged_status"
+        //boolean sharedUserLogged = sharedPreferences.getBoolean(getString(R.string.saved_logged_status), true);
+
+//        if(sharedUserLogged){ //wronggggggggggg
+ //           Intent intent = new Intent(this,  MapsActivity.class);
+   //         startActivity(intent);
+     //   }else{
+            // User not logged yet
+       // }
     }
 }
